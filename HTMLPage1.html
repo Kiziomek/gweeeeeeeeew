@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Oskar Słabosz Clicker</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        p {
+            font-size: 40px;
+        }
+
+        #llll {
+            height: 400px;
+            width: 250px;
+        }
+        .Oskar {
+            animation-duration: 0.5s;
+            animation-name: Oskar;
+        }
+        @keyframes Oskar {
+            50% {
+                height: 420px;
+                width: 270px;
+            }
+
+            100% {
+                height: 400px;
+                width: 250px;
+            }
+        }
+        llll:hover {
+            height: 255px;
+            width: 455px;
+        }
+        #movingImage {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+        #movingGif {
+            position: absolute;
+            height: 200px;
+            width: 400px;
+        }
+        #Geszaft {
+            float: left;
+            position: absolute;
+            top: 100px;
+            left: 200px;
+            font-size: 50px;
+            font-weight:bold;
+        }
+        li {
+            font-size: 25px;
+            text-align: left;
+        }
+        #gawg {
+            position: absolute;
+            left: 1700px;
+            top: 800px;
+            height: 200px;
+            opacity: 0;
+        }
+        #ffff {
+            opacity: 0;
+            height: 200px;
+            width: 200px;
+            left: 1200px;
+            position: absolute;
+            top: 200px;
+        }
+        #hhhhh {
+            opacity: 0;
+            height: 400px;
+            width: 400px;
+            animation-duration: 5s;
+            animation-name: animacja;
+            animation: animacja 5s infinite;
+        }
+        #animation {
+            animation-duration: 2s;
+            animation-name: animacja;
+
+        }
+        @keyframes animacja {
+            0% {
+                bottom: 0;
+                left: 90px;
+            }
+
+            25% {
+                transform: scale(1,0.75);
+                bottom: -50px;
+                left: 90px;
+            }
+
+            50% {
+                transform: scale(1,1) scaleX(-1);
+                bottom: 100px;
+                left: 90px;
+            }
+
+            75% {
+                transform: scale(1,0.75);
+                bottom: -50px;
+                left: 90px;
+            }
+
+            100% {
+                bottom: 0;
+                left: 90px;
+            }
+        }
+        #hrzdhz {
+            opacity: 1;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="hrzdhz">
+        <h1>Oskar Słabosz Clicker</h1>
+        <button onclick="showJumpscare();startAnimation()" style="border:none;background: none;">
+            <img src="20230325_193300.jpg" id="llll" />
+        </button>
+        <p>0</p>
+        <img src="Teemo_0.jpg" id="movingImage" />
+        <img src="the-rock-raised-eye-brow-0jyh4irpmm071tsb.gif" id="movingGif" />
+        <button onclick="gagagagggg()">
+            <img src="459695.png" id="gawg" ; />
+        </button>
+        <img src="1998cc042677ded90a514b666611ad7f.jpg" id="ffff" />
+        <img src="8ce4eed6-a500-4f61-8076-ad25929de9a1.jpg" id="hhhhh" />
+        <div id="Geszaft">
+            Geszaft
+            <ul>
+                <li>Gówno - 200 <button onclick="aktualizujWidocznosc()">Zakup</button></li>
+                <li>Klawiatura Steelseries Apex pro - 1000<button onclick="egggg()">Zakup</button></li>
+                <li>Wypierdol tą szmatę Teemo</li>
+                <li>Statuetka złotego Oskara</li>
+                <li>Nowy mózg dla Oskara - 3.000.000<button onclick="gaggw()">Zakup</button></li>
+            </ul>
+            <button onclick="vcccc()">Beta tylko</button>
+        </div>
+        <script>
+            // Inicjalizacja licznika
+            var counter = 0;
+            function vcccc() {
+                counter = 300000000000000;
+            }
+            // Funkcja obsługująca kliknięcie
+            function showJumpscare() {
+                // Zwiększenie licznika o 1
+                counter++;
+
+                // Aktualizacja tekstu w elemencie <p>
+                document.querySelector('p').innerText = counter;
+
+                // Dodanie efektu dźwiękowego (dźwięk musi być dostępny w tej samej lokalizacji co plik HTML)
+                var audio = new Audio('ObietnicaBoosted.mp3');
+                audio.volume = 0.2;
+                audio.play();
+            }
+            var kapkz = 1;
+            var pociagz = 1;
+            function gagagagggg() {
+                var obraz = document.getElementById("hhhhh");
+                var audio2 = new Audio('2024-01-10 22-29-35.mp3');
+                audio2.play();
+                if (counter >= 50000) {
+                    obraz.style.opacity = 1; // Ustaw opacity na 1 (czyli w pełni widoczny)
+                } else {
+                    obraz.style.opacity = 0; // Ustaw opacity na 0 (czyli niewidoczny)
+                }
+                if (counter >= 50000 && pociagz === 1) {
+                    audio2.play(); // Ustaw opacity na 1 (czyli w pełni widoczny)
+                }
+                else {
+                    audio2.pause();
+                }
+                // Po 1 sekundzie ustaw zmienną pociag na 0
+                setTimeout(function () {
+                    pociagz = 0;
+                    kopkz = 0;
+                }, 1000);
+            }
+            var pociag = 1;
+            var kopk = 1;
+            var kkkkkkkk = 1;
+            function aktualizujWidocznosc() {
+                var obraz = document.getElementById("gawg");
+                var audio2 = new Audio('2024-01-10 22-29-35.mp3');
+                audio2.play();
+                if (counter >= 200) {
+                    obraz.style.opacity = 1; // Ustaw opacity na 1 (czyli w pełni widoczny)
+                } else {
+                    obraz.style.opacity = 0; // Ustaw opacity na 0 (czyli niewidoczny)
+                }
+                if (counter >= 200 && pociag === 1) {
+                    audio2.play(); // Ustaw opacity na 1 (czyli w pełni widoczny)
+                }
+                else {
+                    audio2.pause();
+                }
+                if (kopk === 1 && counter >= 200) {
+                    counter -= 200; // Ustaw opacity na 1 (czyli w pełni widoczny)
+                    kopk === 0
+                }
+                else {
+                    counter -= 0;
+                }
+                // Po 1 sekundzie ustaw zmienną pociag na 0
+                setTimeout(function () {
+                    pociag = 0;
+                    kopk = 0;
+                }, 1000);
+            }
+            var pociam = 1;
+            var kopkk = 1;
+            var kkkkkkkkk = 1;
+            function gaggw() {
+                var obraz = document.getElementById("ffff");
+                var audio2 = new Audio('2024-01-10 22-29-35.mp3');
+                audio2.play();
+                if (counter >= 3000000) {
+                    obraz.style.opacity = 1; // Ustaw opacity na 1 (czyli w pełni widoczny)
+                } else {
+                    obraz.style.opacity = 0; // Ustaw opacity na 0 (czyli niewidoczny)
+                }
+                if (counter >= 200 && pociam === 1) {
+                    audio2.play(); // Ustaw opacity na 1 (czyli w pełni widoczny)
+                }
+                else {
+                    audio2.pause();
+                }
+                if (kopkk === 1 && counter >= 3000000) {
+                    counter -= 3000000; // Ustaw opacity na 1 (czyli w pełni widoczny)
+                    kopkk === 0
+                }
+                else {
+                    counter -= 0;
+                }
+                // Po 1 sekundzie ustaw zmienną pociag na 0
+                setTimeout(function () {
+                    pociag = 0;
+                    kopk = 0;
+                }, 1000);
+            }
+            var vzvzmvv = 1
+            var pociagb = 1;
+            function egggg() {
+                var audio2 = new Audio('2024-01-10 22-29-35.mp3');
+                counter++;
+                var obrazg = document.getElementById("llll");
+                audio2.play();
+                if (counter >= 1000) {
+                    obrazg.src = "20230325_1933004.jpg";
+                } else {
+                    obrazg.src = "20230325_193300.jpg"; // Ustaw opacity na 0 (czyli niewidoczny)
+                }
+                if (counter >= 1000 && pociagb === 1) {
+                    audio2.play(); // Ustaw opacity na 1 (czyli w pełni widoczny)
+                }
+                else {
+                    audio2.pause();
+                }
+                if (vzvzmvv === 1 && counter >= 1000) {
+                    counter -= 1000; // Ustaw opacity na 1 (czyli w pełni widoczny)
+                    vzvzmvv = 0;
+                }
+                else {
+                    counter -= 0;
+                }
+                   
+                // Po 1 sekundzie ustaw zmienną pociag na 0
+                setTimeout(function () {
+                    pociagb = 0;
+                    vzvzmvv = 0;
+                }, 1000);
+            }
+            // Funkcja rozpoczynająca animację po kliknięciu
+            function startAnimation() {
+                var animatedDiv = document.getElementById('llll');
+
+                // Dodanie klasy 'animate', która uruchomi animację
+                animatedDiv.classList.add('Oskar');
+                setTimeout(function () {
+                    animatedDiv.classList.remove('Oskar');
+                }, 100);
+            }
+            // Dodanie nasłuchiwania na zdarzenie kliknięcia
+            document.addEventListener("DOMContentLoaded", function () {
+                var movingGif = document.getElementById("movingGif");
+
+                function getRandomPosition(max) {
+                    return Math.floor(Math.random() * max);
+                }
+
+                function moveAndToggle() {
+                    var screenWidth = window.innerWidth - movingGif.width;
+                    var screenHeight = window.innerHeight - movingGif.height;
+
+                    var newX = getRandomPosition(screenWidth);
+                    var newY = getRandomPosition(screenHeight);
+
+                    movingGif.style.left = newX + "px";
+                    movingGif.style.top = newY + "px";
+
+                    setTimeout(function () {
+                        movingGif.style.display = "none"; // Ukryj obraz
+                        setTimeout(function () {
+                            movingGif.style.display = "block"; // Ponownie pokaż obraz
+                            moveAndToggle(); // Uruchom funkcję rekurencyjnie
+                        }, 1000); // Odczekaj 1 sekundę przed ponownym pokazaniem obrazu
+                    }, 1000); // Odczekaj 1 sekundę przed ukryciem obrazu
+                }
+
+                moveAndToggle(); // Uruchom funkcję po załadowaniu strony
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                var movingImage = document.getElementById("movingImage");
+
+                function getRandomPosition(max) {
+                    return Math.floor(Math.random() * max);
+                }
+
+                function moveImage() {
+                    var screenWidth = window.innerWidth - movingImage.width;
+                    var screenHeight = window.innerHeight - movingImage.height;
+
+                    var newX = getRandomPosition(screenWidth);
+                    var newY = getRandomPosition(screenHeight);
+
+                    var currentX = parseInt(movingImage.style.left) || 0;
+                    var currentY = parseInt(movingImage.style.top) || 0;
+
+                    var deltaX = newX - currentX;
+                    var deltaY = newY - currentY;
+
+                    var startTime;
+                    function animate(time) {
+                        if (!startTime) startTime = time;
+
+                        var progress = (time - startTime) / 1000; // Czas w sekundach
+
+                        if (progress < 1) {
+                            movingImage.style.left = currentX + deltaX * progress + "px";
+                            movingImage.style.top = currentY + deltaY * progress + "px";
+                            requestAnimationFrame(animate);
+                        } else {
+                            movingImage.style.left = newX + "px";
+                            movingImage.style.top = newY + "px";
+                            setTimeout(moveImage, 0); // Rozpocznij kolejną animację po krótkim opóźnieniu (2 sekundy)
+                        }
+                    }
+
+                    requestAnimationFrame(animate);
+                }
+
+                moveImage(); // Uruchom pierwszą animację
+            });
+        </script>
+    </div>
+</body>
+</html>
