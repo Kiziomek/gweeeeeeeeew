@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hospicjum Antona: Smash or Pass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <script>
+        var blokada = false;
+        function smash() {
+            if (blokada == false) {
+                blokada = true;
+                zdjecie = document.getElementById("zdjecieglowne");
+                /*zdjecie.id = 'zdjecieglowneanimowane';*/
+                zdjecie.style.animationName = "znikanie";
+                zdjecie.style.animationPlayState = "running";
+                setTimeout(() => {
+                    zdjecie.style.animationPlayState = "paused";
+                    zdjecie.style.animationName = "none";
+                    blokada = false;
+                }, 1000);
+            }
+        }
+        function pass() {
+            if (blokada == false) {
+                blokada = true;
+                zdjecie = document.getElementById("zdjecieglowne");
+                /*zdjecie.id = 'zdjecieglowneanimowane';*/
+                zdjecie.style.animationName = "znikaniedrugie";
+                zdjecie.style.animationPlayState = "running";
+                setTimeout(() => {
+                    zdjecie.style.animationPlayState = "paused";
+                    zdjecie.style.animationName = "none";
+                    blokada = false;
+                    /*else if (blokada == true) {
+                        zdjecie.style.animationPlayState = "paused";
+                        zdjecie.style.animationName = "znikanie";
+                        blokada = false;
+                    }*/
+                }, 1000);
+            }
+        }
+    </script>
+    <script>
+        var blokadaanimacji = false;
+        function playVidsmash() {
+            if (blokadaanimacji == false) {
+                blokadaanimacji = true;
+                x = document.getElementById("background-video");
+                y = document.getElementById("id1");
+                y.style.backgroundColor = "transparent";
+                x.style.opacity = "1";
+                x.play();
+                setTimeout(() => {
+                    x.style.opacity = "0";
+                    y.style.backgroundColor = "#080808";
+                    blokadaanimacji = false;
+                }, 1000);
+            }
+        } 
+
+        function playVidpass() {
+            if (blokadaanimacji == false) {
+                blokadaanimacji = true;
+                xy = document.getElementById("background-video2");
+                y = document.getElementById("id1");
+                y.style.backgroundColor = "transparent";
+                xy.style.opacity = "1";
+                xy.play();
+                setTimeout(() => {
+                    xy.style.opacity = "0";
+                    y.style.backgroundColor = "#080808";
+                    blokadaanimacji = false;
+                }, 1000/*1500*/);
+            }
+        }
+    </script>
+    <script>
+        var zmiennazdjecie = 1;
+        function zmianazdjecia() {
+            if (zmiennazdjecie == 1) {
+                zmiennazdjecie++;
+                zdjecie = document.getElementById("zdjecieglowne");
+                setTimeout(() => {
+                    zdjecie.src = "ok.gif";
+                }, 1000);
+            }
+            else if (zmiennazdjecie == 2) {
+                zmiennazdjecie++;
+                zdjecie = document.getElementById("zdjecieglowne");
+                setTimeout(() => {
+                    zdjecie.src = "IMG_20240608_212321.jpg";
+                }, 1000);
+            }
+            else if (zmiennazdjecie == 3) {
+                zmiennazdjecie++;
+                zdjecie = document.getElementById("zdjecieglowne");
+                setTimeout(() => {
+                    zdjecie.src = "362516183_288343900343670_4164650593897956449_n.png";
+                }, 1000);
+            }
+            else if (zmiennazdjecie == 4) {
+                zmiennazdjecie++;
+                zdjecie = document.getElementById("zdjecieglowne");
+                setTimeout(() => {
+                    zdjecie.src = "ok2.png";
+                }, 1000);
+            }
+        }
+    </script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #id1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: #080808;
+        }
+
+        .przyciski {
+            border-radius: 5px;
+            width: 200px;
+            height: 80px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: white;
+            text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+        }
+
+        #kontenerprzyciskow {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+
+        #smash {
+            background-color: lime;
+            transition-duration: 0.20s;
+        }
+
+        #pass {
+            background-color: red;
+            transition-duration: 0.20s;
+        }
+
+        #smash:hover {
+            background-color: green;
+        }
+
+        #pass:hover {
+            background-color: darkred;
+        }
+
+        #napis {
+            font-size: 85px;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: white;
+        }
+
+        @keyframes znikanie {
+            100% {
+                margin-right: 4000px;
+            }
+        }
+
+        @keyframes znikaniedrugie {
+            100% {
+                margin-left: 4000px;
+            }
+        }
+
+        @keyframes znikanie2 {
+            100% {
+                margin-right: 4000px;
+            }
+        }
+
+        #zdjecieglowne {
+            animation-name: znikanie;
+            animation-duration: 1.5s;
+            animation-play-state: paused;
+            animation-timing-function: ease-in-out;
+            z-index: 2;
+        }
+
+        #zdjecieglowneanimowane {
+            animation-name: znikanie;
+            animation-duration: 1s;
+            animation-play-state: running;
+        }
+
+        button {
+            background: none;
+            border: none;
+        }
+
+        .animuj {
+            animation-play-state: running;
+        }
+        #background-video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0;
+        }
+        #background-video2 {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0;
+        }
+        #statyguzik {
+            width: 5vw;
+            height: 5vh;
+            font-size: 1.2em;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 400;
+            font-style: bold;
+            color: white;
+            border: 2px solid rgb(57, 128, 242);
+            border-radius: 5px;
+            transition: 0.15s;
+            align-self:flex-end;
+            margin-right: 2.5%;
+            background-color: rgb(0, 145, 255);
+        }
+        #statyguzik:hover {
+            background-color: rgb(6, 57, 95);
+            border: 2px solid rgb(6, 57, 95);
+        }
+        #moai {
+            align-self: flex-start;
+            position: absolute;
+            left: 5%;
+            top: 30%;
+            height: 50vh;
+            width: 25vw;
+            box-shadow: #000;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <video id="background-video" muted>
+        <source src="smash.webm" type="video/mp4">
+    </video>
+    <video id="background-video2" muted>
+        <source src="pass.webm" type="video/mp4">
+    </video>
+    <div id="id1">
+        <button id="statyguzik">Statystyki</button>
+        <div id="napis">Smash or Pass</div>
+        <img id="zdjecieglowne" src="oskar1.jpg" width="250" height="400" />
+        <div id="kontenerprzyciskow">
+            <button onclick="smash(), zmianazdjecia(), playVidsmash()">
+                <div class="przyciski" id="smash">Smash</div>
+            </button>
+            <button onclick="pass(), zmianazdjecia(), playVidpass()">
+                <div class="przyciski" id="pass">Pass</div>
+            </button>
+        </div>
+        <div>
+            <img id="moai" src="ai-generated-easter-island-rock-moai-statue-isolated-on-transparent-background-free-png.png" />
+        </div>
+    </div>
+</body>
+</html>
