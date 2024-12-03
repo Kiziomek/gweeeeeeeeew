@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wsparcie Antona</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #kontener {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+        }
+        header {
+            width: 100vw;
+            height: 5em;
+            background-color: #be122fc0;
+            box-shadow: 2px 2px 8px 0px rgb(0, 0, 0);
+            display:flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        #headerImage 
+        {
+            margin-left: 2.5em;
+            width: 18em;
+            height: 5em;
+        }
+        .anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#napisHeader 
+{
+    font-size: 45px;
+    color: white;
+    font-family: "Anton", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  position: absolute;
+  left: 40%;
+}
+.kafelkiHeader {
+    display:flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+    margin-left: 25px;
+    height: 95%;
+    width: 5.5%;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5% ;
+    color: white;
+}
+.kafelkiHeader:hover 
+{
+    background-color: rgb(224, 224, 224);
+    color: palevioletred;
+}
+#glowny 
+{
+    align-self: center;
+    background-color: rgba(233, 137, 169, 0.541);
+    width: 75%;
+    height: 100%;
+    border-radius: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#podHeader 
+{
+    background-color: red;
+    width: 100%;
+    height: 20vh;
+    background-image: url("podHeader.jpg");
+    background-size: 100% 100%;
+    filter:blur(0.1rem);
+}
+    .wiekszeNapisy 
+    {
+        color: white;
+        font-size: 45px;
+    }
+    .Napisy 
+    {
+        color: white;
+        font-size: 25px;
+    }
+    .zdjecieGlowne {
+        width: 25em;
+        align-self: flex-end;
+    }
+    </style>
+</head>
+<body>
+    <div id="kontener">
+        <header>
+            <img src="headerImage1.png" id="headerImage"/>
+            <div class="kafelkiHeader anton-regular">Informacje</div>
+            <span id="napisHeader">Pomagamy Chorym <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/160px-Heart_coraz%C3%B3n.svg.png" width="50px" height="50px" style="position: absolute; top: 10px; margin-left: 5px;"></span>
+        </header>
+        <div id="podHeader"></div>
+        <div id="glowny">
+            <span class="anton-regular wiekszeNapisy">Dlaczego?</span>
+            <span class="anton-regular Napisy">Anton Nierychło jest biednym schorowanym dzieckiem. Cierpi na rzadką chorobę zwaną antuanizm (czyt. debilizm)</span>
+            <button id="Pomoc" onclick="test1()">Czy chcesz pomóc?</button>
+            
+            <img class="zdjecieGlowne" src="Zrzut_ekranu_2024-09-26_201713.png"/>
+        </div>
+    </div>
+    <script src="skrypt.js"></script>
+</body>
+</html>
